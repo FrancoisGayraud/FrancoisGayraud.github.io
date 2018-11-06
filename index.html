@@ -284,6 +284,17 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#comments" class="toc-h1 toc-link" data-title="comments">Comments</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#retrieve-all-comments-for-a-book" class="toc-h2 toc-link" data-title="retrieve-all-comments-for-a-book">Retrieve all comments for a book</a>
+                  </li>
+                  <li>
+                    <a href="#post-a-comment-on-a-book" class="toc-h2 toc-link" data-title="post-a-comment-on-a-book">Post a comment on a book</a>
+                  </li>
+              </ul>
+          </li>
       </div>
         <ul class="toc-footer">
             <li><a href='#'>Made by Feedbook</a></li>
@@ -623,7 +634,67 @@ Each of the requests require a token.
     </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User profile successfully updated."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre><h1 id='comments'>Comments</h1>
+<p>All endpoints for comments</p>
+
+<aside class="notice">
+Each of the requests require a token.
+</aside>
+<h2 id='retrieve-all-comments-for-a-book'>Retrieve all comments for a book</h2>
+<p>This endpoint returns all comments for a book. Token is required in the header of the request.</p>
+<h3 id='http-request-11'>HTTP REQUEST</h3>
+<p><code>GET /v1/comments/1</code></p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"comments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ceci est un commentaire"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"book_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ceci est un commentaire"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"book_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Comments retrieved successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='post-a-comment-on-a-book'>Post a comment on a book</h2>
+<p>This endpoint post a new comment for a book. Token is required in the header of the request.</p>
+<h3 id='http-request-12'>HTTP REQUEST</h3>
+<p><code>POST /v1/comments/</code></p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Comment successfully added."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ceci est un commentaire"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"book_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h4 id='body-parameters-5'>BODY PARAMETERS</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>content</td>
+<td>Comment&#39;s content.</td>
+</tr>
+<tr>
+<td>book_id</td>
+<td>The id of the book.</td>
+</tr>
+</tbody></table>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">

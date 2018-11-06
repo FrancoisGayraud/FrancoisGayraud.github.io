@@ -27,7 +27,20 @@
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="0">
                 <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
+                <folding>
+                  <marker date="1541265876000" expanded="true" signature="208:595" ph="{&quot;status&quot;: 200...}" />
+                  <marker date="1541265876000" expanded="true" signature="236:535" ph="[...]" />
+                  <marker date="1541265876000" expanded="true" signature="240:384" ph="{&quot;id&quot;: 1...}" />
+                  <marker date="1541265876000" expanded="true" signature="388:532" ph="{&quot;id&quot;: 2...}" />
+                  <marker date="1541265876000" expanded="true" signature="743:982" ph="{&quot;status&quot;: 200...}" />
+                  <marker date="1541265876000" expanded="true" signature="773:920" ph="{&quot;id&quot;: 3...}" />
+                  <marker date="1541265876000" expanded="true" signature="1159:1613" ph="{&quot;status&quot;: 200...}" />
+                  <marker date="1541265876000" expanded="true" signature="1193:1354" ph="{&quot;id&quot;: 3...}" />
+                  <marker date="1541265876000" expanded="true" signature="1370:1544" ph="{&quot;id&quot;: 3...}" />
+                  <marker date="1541265876000" expanded="true" signature="1738:2153" ph="{&quot;status&quot;: 200...}" />
+                  <marker date="1541265876000" expanded="true" signature="1770:1922" ph="{&quot;id&quot;: 3...}" />
+                  <marker date="1541265876000" expanded="true" signature="1936:2087" ph="{&quot;id&quot;: 3...}" />
+                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -38,8 +51,8 @@
         <entry file="file://$PROJECT_DIR$/_favorites.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="903">
-                <caret line="65" column="24" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="3" />
                 <folding>
                   <marker date="1541513689000" expanded="true" signature="291:566" ph="{&quot;status&quot;: 200...}" />
                   <marker date="1541513689000" expanded="true" signature="323:496" ph="[...]" />
@@ -52,7 +65,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_profile.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_profile.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_profile.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -70,6 +83,42 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="_comments.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_comments.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="663">
+                <caret line="53" column="21" lean-forward="true" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+                <folding>
+                  <marker date="1541514723000" expanded="true" signature="295:582" ph="{&quot;status&quot;: 200...}" />
+                  <marker date="1541514723000" expanded="true" signature="326:519" ph="[...]" />
+                  <marker date="1541514723000" expanded="true" signature="330:421" ph="{&quot;id&quot;: 1...}" />
+                  <marker date="1541514723000" expanded="true" signature="425:516" ph="{&quot;id&quot;: 2...}" />
+                  <marker date="1541514723000" expanded="true" signature="762:942" ph="{&quot;status&quot;: 200...}" />
+                  <marker date="1541514723000" expanded="true" signature="849:940" ph="{&quot;id&quot;: null...}" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_authentication.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_authentication.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="791">
+                <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+                <folding>
+                  <marker date="1541265702000" expanded="true" signature="405:656" ph="{&quot;status&quot;: 200...}" />
+                  <marker date="1541265702000" expanded="true" signature="857:924" ph="{&quot;success&quot;: true...}" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="IdeDocumentHistory">
@@ -77,6 +126,7 @@
       <list>
         <option value="$PROJECT_DIR$/_favorites.md" />
         <option value="$PROJECT_DIR$/_profile.md" />
+        <option value="$PROJECT_DIR$/_comments.md" />
       </list>
     </option>
   </component>
@@ -142,6 +192,68 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -152,12 +264,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541513663449</updated>
-      <workItem from="1541513665074" duration="547000" />
+      <workItem from="1541513665074" duration="794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="547000" />
+    <option name="totallyTimeSpent" value="794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="12" y="32" width="1904" height="1153" extended-state="0" />
@@ -192,12 +304,41 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/_profile.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="864">
+            <caret line="54" column="3" lean-forward="false" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
+            <folding>
+              <marker date="1541513704000" expanded="true" signature="299:743" ph="{&quot;status&quot;: 200...}" />
+              <marker date="1541513704000" expanded="true" signature="326:675" ph="{&quot;id&quot;: 4...}" />
+              <marker date="1541513704000" expanded="true" signature="936:1378" ph="{&quot;status&quot;: 200...}" />
+              <marker date="1541513704000" expanded="true" signature="963:1312" ph="{&quot;id&quot;: 4...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_books.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
+            <folding>
+              <marker date="1541265876000" expanded="true" signature="208:595" ph="{&quot;status&quot;: 200...}" />
+              <marker date="1541265876000" expanded="true" signature="236:535" ph="[...]" />
+              <marker date="1541265876000" expanded="true" signature="240:384" ph="{&quot;id&quot;: 1...}" />
+              <marker date="1541265876000" expanded="true" signature="388:532" ph="{&quot;id&quot;: 2...}" />
+              <marker date="1541265876000" expanded="true" signature="743:982" ph="{&quot;status&quot;: 200...}" />
+              <marker date="1541265876000" expanded="true" signature="773:920" ph="{&quot;id&quot;: 3...}" />
+              <marker date="1541265876000" expanded="true" signature="1159:1613" ph="{&quot;status&quot;: 200...}" />
+              <marker date="1541265876000" expanded="true" signature="1193:1354" ph="{&quot;id&quot;: 3...}" />
+              <marker date="1541265876000" expanded="true" signature="1370:1544" ph="{&quot;id&quot;: 3...}" />
+              <marker date="1541265876000" expanded="true" signature="1738:2153" ph="{&quot;status&quot;: 200...}" />
+              <marker date="1541265876000" expanded="true" signature="1770:1922" ph="{&quot;id&quot;: 3...}" />
+              <marker date="1541265876000" expanded="true" signature="1936:2087" ph="{&quot;id&quot;: 3...}" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -206,8 +347,8 @@
     <entry file="file://$PROJECT_DIR$/_favorites.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="903">
-            <caret line="65" column="24" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="3" />
             <folding>
               <marker date="1541513689000" expanded="true" signature="291:566" ph="{&quot;status&quot;: 200...}" />
               <marker date="1541513689000" expanded="true" signature="323:496" ph="[...]" />
@@ -219,16 +360,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_profile.md">
+    <entry file="file://$PROJECT_DIR$/_authentication.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="864">
-            <caret line="54" column="3" lean-forward="false" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
+          <first_editor relative-caret-position="791">
+            <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
             <folding>
-              <marker date="1541513704000" expanded="true" signature="299:743" ph="{&quot;status&quot;: 200...}" />
-              <marker date="1541513704000" expanded="true" signature="326:675" ph="{&quot;id&quot;: 4...}" />
-              <marker date="1541513704000" expanded="true" signature="936:1378" ph="{&quot;status&quot;: 200...}" />
-              <marker date="1541513704000" expanded="true" signature="963:1312" ph="{&quot;id&quot;: 4...}" />
+              <marker date="1541265702000" expanded="true" signature="405:656" ph="{&quot;status&quot;: 200...}" />
+              <marker date="1541265702000" expanded="true" signature="857:924" ph="{&quot;success&quot;: true...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_comments.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="663">
+            <caret line="53" column="21" lean-forward="true" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+            <folding>
+              <marker date="1541514723000" expanded="true" signature="295:582" ph="{&quot;status&quot;: 200...}" />
+              <marker date="1541514723000" expanded="true" signature="326:519" ph="[...]" />
+              <marker date="1541514723000" expanded="true" signature="330:421" ph="{&quot;id&quot;: 1...}" />
+              <marker date="1541514723000" expanded="true" signature="425:516" ph="{&quot;id&quot;: 2...}" />
+              <marker date="1541514723000" expanded="true" signature="762:942" ph="{&quot;status&quot;: 200...}" />
+              <marker date="1541514723000" expanded="true" signature="849:940" ph="{&quot;id&quot;: null...}" />
             </folding>
           </first_editor>
           <second_editor />
