@@ -271,6 +271,9 @@
                   <li>
                     <a href="#add-a-favorite" class="toc-h2 toc-link" data-title="add-a-favorite">Add a favorite</a>
                   </li>
+                  <li>
+                    <a href="#delete-a-favorite" class="toc-h2 toc-link" data-title="delete-a-favorite">Delete a favorite</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -594,7 +597,16 @@ Each of the requests require a token.
 <td>Type of the book.</td>
 </tr>
 </tbody></table>
-<h1 id='profile'>Profile</h1>
+<h2 id='delete-a-favorite'>Delete a favorite</h2>
+<p>This endpoint delete a favorite for the user, with the id specified at the end of the URL.</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>DELETE /v1/favorites/me/:idOfFavorite</code></p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Favorite successfully deleted."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h1 id='profile'>Profile</h1>
 <p>All endpoints for profiles.</p>
 
 <aside class="notice">
@@ -602,7 +614,7 @@ Each of the requests require a token.
 </aside>
 <h2 id='retrieve-profile-information'>Retrieve profile information</h2>
 <p>This endpoint returns information of the user profile. Token is required in the header of the request.</p>
-<h3 id='http-request-9'>HTTP REQUEST</h3>
+<h3 id='http-request-10'>HTTP REQUEST</h3>
 <p><code>GET /v1/profile/me</code></p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -619,7 +631,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h2 id='update-profile-information'>Update profile information</h2>
 <p>This endpoint update information of the user profile. Token is required in the header of the request.</p>
-<h3 id='http-request-10'>HTTP REQUEST</h3>
+<h3 id='http-request-11'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/profile/me</code></p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -641,9 +653,9 @@ Each of the requests require a token.
 Each of the requests require a token.
 </aside>
 <h2 id='retrieve-all-comments-for-a-book'>Retrieve all comments for a book</h2>
-<p>This endpoint returns all comments for a book. Token is required in the header of the request.</p>
-<h3 id='http-request-11'>HTTP REQUEST</h3>
-<p><code>GET /v1/comments/1</code></p>
+<p>This endpoint returns all comments for a book, the id of the book must be specified at the end of the URL. Token is required in the header of the request.</p>
+<h3 id='http-request-12'>HTTP REQUEST</h3>
+<p><code>GET /v1/comments/books/:idOfBook</code></p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
     </span><span class="s2">"comments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -665,7 +677,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h2 id='post-a-comment-on-a-book'>Post a comment on a book</h2>
 <p>This endpoint post a new comment for a book. Token is required in the header of the request.</p>
-<h3 id='http-request-12'>HTTP REQUEST</h3>
+<h3 id='http-request-13'>HTTP REQUEST</h3>
 <p><code>POST /v1/comments/</code></p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
