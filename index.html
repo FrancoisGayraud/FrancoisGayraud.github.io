@@ -659,7 +659,7 @@ Each of the requests require a token.
 </span></code></pre>
 <p>This endpoint deletes the book with the id specified in the URL.</p>
 <h3 id='http-request-7'>HTTP REQUEST</h3>
-<p><code>DELETE /v1/books/</code></p>
+<p><code>DELETE /v1/books/:from/:to</code></p>
 <h2 id='get-all-books-between-a-time-range'>Get all books between a time range</h2>
 <blockquote>
 <p>Here we retrieve all books between <code>11/01/2018</code> and <code>12/03/2018</code></p>
@@ -701,22 +701,6 @@ Each of the requests require a token.
 <aside class="warning">
 The date format is MM/DD/YYYY
 </aside>
-<h3 id='body-parameters-4'>BODY PARAMETERS</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>from</td>
-<td>The beginning of the time range (date)</td>
-</tr>
-<tr>
-<td>to</td>
-<td>The end of the time range (date)</td>
-</tr>
-</tbody></table>
 <h2 id='search-books'>Search books</h2>
 <blockquote>
 <p>Here we are searching for <code>tes</code> </p>
@@ -753,23 +737,11 @@ The date format is MM/DD/YYYY
 </span></code></pre>
 <p>This endpoint returns all books that contains the &quot;search&quot; variable in their title.</p>
 <h3 id='http-request-9'>HTTP REQUEST</h3>
-<p><code>GET /v1/books/search</code></p>
+<p><code>GET /v1/books/search/:search</code></p>
 
 <aside class="warning">
 The search is case sensitive.
 </aside>
-<h3 id='body-parameters-5'>BODY PARAMETERS</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>search</td>
-<td>The string you want to search in books title</td>
-</tr>
-</tbody></table>
 <h1 id='favorites'>Favorites</h1>
 <p>All endpoints for favorites</p>
 
@@ -816,7 +788,7 @@ Each of the requests require a token.
 <p>This endpoint add a favorite for the user, with the title and the type of a book.</p>
 <h3 id='http-request-11'>HTTP Request</h3>
 <p><code>POST /v1/favorites/me</code></p>
-<h3 id='body-parameters-6'>BODY PARAMETERS</h3>
+<h3 id='body-parameters-4'>BODY PARAMETERS</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1190,7 +1162,7 @@ Each of the requests require a token.
 <p>This endpoint posts a new comment for a book. </p>
 <h3 id='http-request-22'>HTTP REQUEST</h3>
 <p><code>POST /v1/comments/</code></p>
-<h4 id='body-parameters-7'>BODY PARAMETERS</h4>
+<h4 id='body-parameters-5'>BODY PARAMETERS</h4>
 <table><thead>
 <tr>
 <th>Parameter</th>
