@@ -1665,10 +1665,14 @@ Each of the requests require a token.
 <td>username</td>
 <td>username of the receiver.</td>
 </tr>
+<tr>
+<td>content</td>
+<td>the content of the message.</td>
+</tr>
 </tbody></table>
 
 <aside class="warning">
-Only ONE of these parameters is required
+Only ONE parameter is required to identify the receiver (EMAIL, USERNAME OR ID).
 </aside>
 <h2 id='get-your-messages'>Get your messages</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
