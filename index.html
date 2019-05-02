@@ -1037,34 +1037,61 @@ The date format is MM/DD/YYYY
 </aside>
 <h2 id='search-books'>Search books</h2>
 <blockquote>
-<p>Here we are searching for <code>tes</code> in &quot;search_text&quot;, and <code>Comédie</code> as &quot;type&quot;</p>
+<p>Here we are searching for <code>Aventure</code> in &quot;type&quot; and <code>Comédie</code> as type and <code>League</code> as author, for the first page
+`https://api-feedbook.herokuapp.com/api/v1/books/search/1?type=Comédie&amp;type=Aventure&amp;author=League</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
   </span><span class="s2">"totalPages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"totalBooks"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"totalBooks"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
   </span><span class="s2">"books"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Comédie"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dofus-2018-11-08_12-11-15-Super-kot.png"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"pdf_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Notification (1).pdf"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^^^^^"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"pub_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-01T19:44:10.000Z"</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tintin au congo"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aventure"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/media/books_cover/tintin-au-congo.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pdf_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/media/books/tintin-au-congo.pdf"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C'est l'histoire de tintin au congo"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pub_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"p"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-19T00:08:00.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"grade"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tesqdft"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Comédie"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dofus-2018-11-08_12-11-15-Super-kot.png"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"pdf_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Notification (1).pdf"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^^^^^"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"pub_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-02T19:44:15.000Z"</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tintin est le Lotus bleu"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aventure"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/media/books_cover/Tintin est le Lotus bleu.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pdf_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/media/books/Tintin est le Lotus bleu.pdf"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"près avoir sauvé le Maharadjah de Rawhajpoutalah de la folie, Tintin est l'hôte d'honneur de celui-ci. Mais durant ses loisirs sur son poste émetteur récepteur"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pub_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"p"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-19T16:04:08.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"grade"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tintin en Amérique"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aventure"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/media/books_cover/Tintin en Amérique.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pdf_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/media/books/Tintin en Amérique.pdf"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C'est l'histoire de tintin en Amérique"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pub_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"p"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-19T17:00:28.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"grade"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Astérix et les normands"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aventure"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/media/books_cover/Astérix et les normands.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pdf_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/media/books/Astérix et les normands.pdf"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L'histoire d'Astérix chez les normands"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pub_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"p"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-19T17:10:43.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"grade"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -1074,7 +1101,7 @@ The date format is MM/DD/YYYY
 <p>This endpoint returns all books matching parameters in the body. </p>
 <h3 id='http-request-15'>HTTP REQUEST</h3>
 <p><code>GET /v1/books/search/:page</code></p>
-<h3 id='body-parameters-7'>BODY PARAMETERS</h3>
+<h3 id='url-parameters'>URL PARAMETERS</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1091,12 +1118,16 @@ The date format is MM/DD/YYYY
 </tr>
 <tr>
 <td>type</td>
-<td>The type of the book (optional)</td>
+<td>The type of the book, can have multiple (optional)</td>
 </tr>
 </tbody></table>
 
 <aside class="warning">
-The search is case sensitive.
+The search is not case sensitive.
+</aside>
+
+<aside class="notice">
+You need at least on parameter
 </aside>
 <h1 id='favorites'>Favorites</h1>
 <p>All endpoints for favorites</p>
@@ -1261,7 +1292,7 @@ Each of the requests require a token.
 <p>This endpoint updates informations of the user profile. </p>
 <h3 id='http-request-21'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/profile/me</code></p>
-<h3 id='body-parameters-8'>BODY PARAMETERS</h3>
+<h3 id='body-parameters-7'>BODY PARAMETERS</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1324,7 +1355,7 @@ Each of the requests require a token.
 <p>This endpoint updates the password of the user.</p>
 <h3 id='http-request-22'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/profile/password</code></p>
-<h3 id='body-parameters-9'>BODY PARAMETERS</h3>
+<h3 id='body-parameters-8'>BODY PARAMETERS</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1371,7 +1402,7 @@ Each of the requests require a token.
 <p>This endpoint updates the superuser status of the user by changing the variable &quot;is_superuser&quot;.</p>
 <h3 id='http-request-23'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/profile/superuser</code></p>
-<h3 id='body-parameters-10'>BODY PARAMETERS</h3>
+<h3 id='body-parameters-9'>BODY PARAMETERS</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1414,7 +1445,7 @@ Each of the requests require a token.
 <p>This endpoint changes the variable &quot;is_active&quot; of the user.</p>
 <h3 id='http-request-24'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/profile/active</code></p>
-<h3 id='body-parameters-11'>BODY PARAMETERS</h3>
+<h3 id='body-parameters-10'>BODY PARAMETERS</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1455,7 +1486,7 @@ This endpoint create a new token, that it returns on the JSON data.
 </aside>
 <h3 id='http-request-25'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/profile/email</code></p>
-<h3 id='body-parameters-12'>BODY PARAMETERS</h3>
+<h3 id='body-parameters-11'>BODY PARAMETERS</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1498,7 +1529,7 @@ This endpoint create a new token, that it returns on the JSON data.
 <p>This endpoint changes the variable &quot;is_staff&quot; of the user.</p>
 <h3 id='http-request-26'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/profile/staff</code></p>
-<h3 id='body-parameters-13'>BODY PARAMETERS</h3>
+<h3 id='body-parameters-12'>BODY PARAMETERS</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1646,7 +1677,7 @@ Each of the requests require a token.
 <p>This endpoint posts a new comment for a book. </p>
 <h3 id='http-request-29'>HTTP REQUEST</h3>
 <p><code>POST /v1/comments/</code></p>
-<h4 id='body-parameters-14'>BODY PARAMETERS</h4>
+<h4 id='body-parameters-13'>BODY PARAMETERS</h4>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1709,7 +1740,7 @@ Each of the requests require a token.
 <p>This endpoint updates the comment with the id specified at the end of the url.</p>
 <h3 id='http-request-33'>HTTP Request</h3>
 <p><code>PATCH /v1/comments/:idOfComment</code></p>
-<h3 id='body-parameters-15'>BODY PARAMETERS</h3>
+<h3 id='body-parameters-14'>BODY PARAMETERS</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1743,7 +1774,7 @@ Each of the requests require a token.
 <p>This endpoint posts a new message.</p>
 <h3 id='http-request-34'>HTTP REQUEST</h3>
 <p><code>POST /v1/messages/</code></p>
-<h3 id='body-parameters-16'>BODY PARAMETERS</h3>
+<h3 id='body-parameters-15'>BODY PARAMETERS</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1828,7 +1859,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
 </aside>
 <h3 id='http-request-36'>HTTP REQUEST</h3>
 <p><code>POST /v1/reviewers</code></p>
-<h3 id='body-parameters-17'>BODY PARAMETERS</h3>
+<h3 id='body-parameters-16'>BODY PARAMETERS</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1973,7 +2004,7 @@ Each of the requests require a token.
 <p>This endpoint create a review request for the book that has the id specified in the URL.</p>
 <h3 id='http-request-40'>HTTP REQUEST</h3>
 <p><code>POST /v1/reviews/request/:idOfBook</code></p>
-<h3 id='body-parameters-18'>BODY PARAMETERS</h3>
+<h3 id='body-parameters-17'>BODY PARAMETERS</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2064,7 +2095,7 @@ The date format is MM/DD/YYYY
 <p>This endpoint posts a review for the request with the id specified in the URL.</p>
 <h3 id='http-request-43'>HTTP REQUEST</h3>
 <p><code>POST /v1/reviews/:idOfRequestReview</code></p>
-<h3 id='body-parameters-19'>BODY PARAMETERS</h3>
+<h3 id='body-parameters-18'>BODY PARAMETERS</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
