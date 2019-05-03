@@ -416,7 +416,7 @@
                     <a href="#get-all-your-reviews-as-an-author" class="toc-h2 toc-link" data-title="get-all-your-reviews-as-an-author">Get all your reviews as an author</a>
                   </li>
                   <li>
-                    <a href="#get-all-your-reviews-as-an-reviewer" class="toc-h2 toc-link" data-title="get-all-your-reviews-as-an-reviewer">Get all your reviews as an reviewer</a>
+                    <a href="#get-all-your-reviews-as-a-reviewer" class="toc-h2 toc-link" data-title="get-all-your-reviews-as-a-reviewer">Get all your reviews as a reviewer</a>
                   </li>
               </ul>
           </li>
@@ -428,6 +428,9 @@
                   </li>
                   <li>
                     <a href="#get-all-authors" class="toc-h2 toc-link" data-title="get-all-authors">Get all authors</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-user-by-its-id" class="toc-h2 toc-link" data-title="get-a-user-by-its-id">Get a user by its id</a>
                   </li>
               </ul>
           </li>
@@ -2285,7 +2288,7 @@ Grade goes from 0 to 20
 <p>This endpoint returns all the reviews, grouped by requests.</p>
 <h3 id='http-request-47'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/author</code></p>
-<h2 id='get-all-your-reviews-as-an-reviewer'>Get all your reviews as an reviewer</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+<h2 id='get-all-your-reviews-as-a-reviewer'>Get all your reviews as a reviewer</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
   </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reviews successfully retrieved."</span><span class="p">,</span><span class="w">
@@ -2331,36 +2334,48 @@ Each of the requests require a token.
 </aside>
 <h2 id='get-all-users'>Get all users</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"authors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-02T10:43:37.000Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18T00:04:26.000Z"</span><span class="w">
+      </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-03T12:27:41.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18T00:04:26.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"harout"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-02T07:35:49.000Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18T11:29:34.000Z"</span><span class="w">
+      </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-03T09:24:12.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18T11:29:34.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CaptainLegends"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-02T14:29:51.000Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18T17:37:02.000Z"</span><span class="w">
+      </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-03T14:31:59.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18T17:37:02.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Antoine"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-22T07:21:08.000Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-19T18:19:05.000Z"</span><span class="w">
+      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-19T18:19:05.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Antoinette"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-20T11:38:24.000Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-20T11:38:16.000Z"</span><span class="w">
+      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-20T11:38:16.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-02T12:01:31.000Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-26T01:43:50.000Z"</span><span class="w">
+      </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-03T15:30:41.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-26T01:43:50.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-03T15:21:46.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -2369,19 +2384,21 @@ Each of the requests require a token.
 </span></code></pre>
 <p>This endpoint returns all users.</p>
 <h3 id='http-request-49'>HTTP REQUEST</h3>
-<p><code>GET /v1/users/users</code></p>
+<p><code>GET /v1/users</code></p>
 <h2 id='get-all-authors'>Get all authors</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
   </span><span class="s2">"authors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-02T10:43:37.000Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18T00:04:26.000Z"</span><span class="w">
+      </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-03T12:27:41.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18T00:04:26.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"harout"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-02T07:35:49.000Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18T11:29:34.000Z"</span><span class="w">
+      </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-03T15:30:41.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-26T01:43:50.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -2391,7 +2408,18 @@ Each of the requests require a token.
 <p>This endpoint returns all authors.</p>
 <h3 id='http-request-50'>HTTP REQUEST</h3>
 <p><code>GET /v1/users/authors</code></p>
-
+<h2 id='get-a-user-by-its-id'>Get a user by its id</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-03T12:27:41.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18T00:04:26.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User retrieved successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
       </div>
       <div class="dark-box">
       </div>
