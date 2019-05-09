@@ -388,13 +388,16 @@
                     <a href="#get-all-your-messages" class="toc-h2 toc-link" data-title="get-all-your-messages">Get all your messages</a>
                   </li>
                   <li>
-                    <a href="#get-all-users-that-you-have-a-conversation-with" class="toc-h2 toc-link" data-title="get-all-users-that-you-have-a-conversation-with">Get all users that you have a conversation with</a>
+                    <a href="#get-all-users-that-you-have-a-conversation-with-by-page" class="toc-h2 toc-link" data-title="get-all-users-that-you-have-a-conversation-with-by-page">Get all users that you have a conversation with by page</a>
                   </li>
                   <li>
-                    <a href="#get-all-messages-from-a-conversation" class="toc-h2 toc-link" data-title="get-all-messages-from-a-conversation">Get all messages from a conversation</a>
+                    <a href="#get-all-messages-from-a-conversation-by-page" class="toc-h2 toc-link" data-title="get-all-messages-from-a-conversation-by-page">Get all messages from a conversation by page</a>
                   </li>
                   <li>
                     <a href="#remove-a-conversation" class="toc-h2 toc-link" data-title="remove-a-conversation">Remove a conversation</a>
+                  </li>
+                  <li>
+                    <a href="#remove-a-message" class="toc-h2 toc-link" data-title="remove-a-message">Remove a message</a>
                   </li>
               </ul>
           </li>
@@ -2316,7 +2319,7 @@ Each of the requests require a token.
 </tr>
 <tr>
 <td>subject</td>
-<td>the subject of the message.</td>
+<td>the subject of the message (optional).</td>
 </tr>
 </tbody></table>
 
@@ -2399,30 +2402,76 @@ Only ONE parameter is required to identify the receiver (EMAIL, USERNAME OR ID).
 <p>This endpoint gets all the messages that you received.</p>
 <h3 id='http-request-41'>HTTP REQUEST</h3>
 <p><code>GET /v1/messages</code></p>
-<h2 id='get-all-users-that-you-have-a-conversation-with'>Get all users that you have a conversation with</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+<h2 id='get-all-users-that-you-have-a-conversation-with-by-page'>Get all users that you have a conversation with by page</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
   </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Conversations successfully retrieved"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"conversations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="w">
+      </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Antoine"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"last_message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"sender_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"receiver_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">58</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"message test à antoine le bro"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-09T16:35:30.000Z"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CaptainLegends"</span><span class="w">
+      </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"last_message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"sender_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"receiver_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"message à L'api"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-09T16:14:42.000Z"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API"</span><span class="w">
+      </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dza"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"last_message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"sender_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"receiver_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"message à dza"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-09T15:42:04.000Z"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"last_message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"sender_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"receiver_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">43</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"message à leagueof"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-09T15:27:21.000Z"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"totalPages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"totalConversation"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
   </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint gets all the users that you have an open conversation with.</p>
+<p>This endpoint gets all the users that you have an open conversation with, and the last message sent in each conversations. The search is by page</p>
 <h3 id='http-request-42'>HTTP REQUEST</h3>
-<p><code>GET /v1/messages/conversations</code></p>
-<h2 id='get-all-messages-from-a-conversation'>Get all messages from a conversation</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+<p><code>GET /v1/messages/conversations/:page</code></p>
+
+<aside class="warning">
+There are 10 conversations per page
+</aside>
+<h2 id='get-all-messages-from-a-conversation-by-page'>Get all messages from a conversation by page</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
   </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Conversation successfully retrieved."</span><span class="p">,</span><span class="w">
   </span><span class="s2">"conversation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -2465,12 +2514,14 @@ Only ONE parameter is required to identify the receiver (EMAIL, USERNAME OR ID).
         </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"totalPages"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"totalMessages"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint gets all the the messages from the conversation with the user specified in the URL.</p>
+<p>This endpoint gets all the the messages from the conversation with the user specified in the URL, by page.</p>
 <h3 id='http-request-43'>HTTP REQUEST</h3>
-<p><code>GET /v1/messages/conversations/:id</code></p>
+<p><code>GET /v1/messages/conversations/:id/:page</code></p>
 
 <aside class="notice">
 The id in the URL is the id of the user you have a conversation with 
@@ -2478,6 +2529,10 @@ The id in the URL is the id of the user you have a conversation with
 
 <aside class="notice">
 Messages are ordered by the date from oldest to newest
+</aside>
+
+<aside class="warning">
+There are 10 messages per page
 </aside>
 <h2 id='remove-a-conversation'>Remove a conversation</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2488,6 +2543,15 @@ Messages are ordered by the date from oldest to newest
 <p>This endpoint deletes all messages from the conversation with the user specified in the URL.</p>
 <h3 id='http-request-44'>HTTP REQUEST</h3>
 <p><code>DELETE /v1/messages/conversations/:id</code></p>
+<h2 id='remove-a-message'>Remove a message</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Message successfully delete."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes the message with the id specified in the URL.</p>
+<h3 id='http-request-45'>HTTP REQUEST</h3>
+<p><code>DELETE /v1/messages/:id</code></p>
 <h1 id='reviewers'>Reviewers</h1>
 <p>All endpoints for managing the Reviewers. The Reviewers table in the database makes the association between a reviewer and an author. It contains 3 columns : reviewer_id, author_id and created_at.</p>
 
@@ -2511,7 +2575,7 @@ Each of the requests require a token.
 <aside class="warning">
 Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
 </aside>
-<h3 id='http-request-45'>HTTP REQUEST</h3>
+<h3 id='http-request-46'>HTTP REQUEST</h3>
 <p><code>POST /v1/reviewers</code></p>
 <h3 id='body-parameters-18'>BODY PARAMETERS</h3>
 <table><thead>
@@ -2578,7 +2642,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoints returns all your reviewers as an author.</p>
-<h3 id='http-request-46'>HTTP REQUEST</h3>
+<h3 id='http-request-47'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviewers/author</code></p>
 <h2 id='get-all-the-authors-that-you-are-a-reviewer-of'>Get all the authors that you are a reviewer of</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2625,7 +2689,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the authors that you are a reviewer of.</p>
-<h3 id='http-request-47'>HTTP REQUEST</h3>
+<h3 id='http-request-48'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviewers/reviewing</code></p>
 <h2 id='delete-a-reviewer'>Delete a reviewer</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2634,7 +2698,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoints delete a reviewer.</p>
-<h3 id='http-request-48'>HTTP REQUEST</h3>
+<h3 id='http-request-49'>HTTP REQUEST</h3>
 <p><code>DELETE /v1/reviewers/:id</code></p>
 <h1 id='reviews'>Reviews</h1>
 <p>All endpoints for the reviews.</p>
@@ -2656,7 +2720,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint create a review request for the book that has the id specified in the URL.</p>
-<h3 id='http-request-49'>HTTP REQUEST</h3>
+<h3 id='http-request-50'>HTTP REQUEST</h3>
 <p><code>POST /v1/reviews/request/:idOfBook</code></p>
 <h3 id='body-parameters-19'>BODY PARAMETERS</h3>
 <table><thead>
@@ -2711,7 +2775,7 @@ The date format is MM/DD/YYYY
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the requests that you created.</p>
-<h3 id='http-request-50'>HTTP REQUEST</h3>
+<h3 id='http-request-51'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/author/request</code></p>
 <h2 id='get-all-the-pending-requests-as-a-reviewer'>Get all the pending requests as a reviewer</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2729,7 +2793,7 @@ The date format is MM/DD/YYYY
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the requests that you created.</p>
-<h3 id='http-request-51'>HTTP REQUEST</h3>
+<h3 id='http-request-52'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/reviewer/request</code></p>
 <h2 id='post-a-review-as-a-reviewer'>Post a review as a reviewer</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2747,7 +2811,7 @@ The date format is MM/DD/YYYY
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint posts a review for the request with the id specified in the URL.</p>
-<h3 id='http-request-52'>HTTP REQUEST</h3>
+<h3 id='http-request-53'>HTTP REQUEST</h3>
 <p><code>POST /v1/reviews/:idOfRequestReview</code></p>
 <h3 id='body-parameters-20'>BODY PARAMETERS</h3>
 <table><thead>
@@ -2823,7 +2887,7 @@ Grade goes from 0 to 20
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the reviews, grouped by requests.</p>
-<h3 id='http-request-53'>HTTP REQUEST</h3>
+<h3 id='http-request-54'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/author</code></p>
 <h2 id='get-all-your-reviews-as-a-reviewer'>Get all your reviews as a reviewer</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2861,7 +2925,7 @@ Grade goes from 0 to 20
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the reviews, grouped by requests.</p>
-<h3 id='http-request-54'>HTTP REQUEST</h3>
+<h3 id='http-request-55'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/reviewer</code></p>
 <h1 id='users'>Users</h1>
 <p>Endpoints relative to users.</p>
@@ -2920,7 +2984,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all users.</p>
-<h3 id='http-request-55'>HTTP REQUEST</h3>
+<h3 id='http-request-56'>HTTP REQUEST</h3>
 <p><code>GET /v1/users</code></p>
 <h2 id='get-all-authors'>Get all authors</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2943,7 +3007,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all authors.</p>
-<h3 id='http-request-56'>HTTP REQUEST</h3>
+<h3 id='http-request-57'>HTTP REQUEST</h3>
 <p><code>GET /v1/users/authors</code></p>
 <h2 id='get-a-user-by-its-id'>Get a user by its id</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2958,7 +3022,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint return the user with the id specified in the URL.</p>
-<h3 id='http-request-57'>HTTP REQUEST</h3>
+<h3 id='http-request-58'>HTTP REQUEST</h3>
 <p><code>GET /v1/users/search/:idOfTheUser</code></p>
 
       </div>
