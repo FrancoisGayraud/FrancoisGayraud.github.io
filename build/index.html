@@ -322,7 +322,7 @@
                     <a href="#patch-a-favorite-change-it-to-private-public" class="toc-h2 toc-link" data-title="patch-a-favorite-change-it-to-private-public">Patch a favorite (change it to private/public)</a>
                   </li>
                   <li>
-                    <a href="#retrieve-all-your-public-favorites" class="toc-h2 toc-link" data-title="retrieve-all-your-public-favorites">Retrieve all your public favorites</a>
+                    <a href="#retrieve-all-your-public-favorites-by-page" class="toc-h2 toc-link" data-title="retrieve-all-your-public-favorites-by-page">Retrieve all your public favorites by page</a>
                   </li>
                   <li>
                     <a href="#retrieve-all-your-private-favorites" class="toc-h2 toc-link" data-title="retrieve-all-your-private-favorites">Retrieve all your private favorites</a>
@@ -1496,8 +1496,8 @@ The date format is MM/DD/YYYY
 The search is not case sensitive.
 </aside>
 
-<aside class="notice">
-You need at least on parameter
+<aside class="warning">
+There are 20 books by page
 </aside>
 <h2 id='update-a-book'>Update a book</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -1589,6 +1589,10 @@ Each of the requests require a token.
 <p>This endpoint returns all favorites of the user, by page. Token is required in the header of the request.</p>
 <h3 id='http-request-20'>HTTP REQUEST</h3>
 <p><code>GET /v1/favorites/me/all/:page</code></p>
+
+<aside class="warning">
+There are 20 favorites by page
+</aside>
 <h2 id='post-a-favorite'>Post a favorite</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> 
    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
     </span><span class="s2">"favorites"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1679,7 +1683,7 @@ Each of the requests require a token.
 <td>&quot;p&quot; for public &quot;v&quot; private</td>
 </tr>
 </tbody></table>
-<h2 id='retrieve-all-your-public-favorites'>Retrieve all your public favorites</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+<h2 id='retrieve-all-your-public-favorites-by-page'>Retrieve all your public favorites by page</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
   </span><span class="s2">"favorites"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -1717,7 +1721,11 @@ Each of the requests require a token.
 </span></code></pre>
 <p>This endpoint get all your public favorites.</p>
 <h3 id='http-request-25'>HTTP REQUEST</h3>
-<p><code>GET /v1/favorites/me/public</code></p>
+<p><code>GET /v1/favorites/me/public/:page</code></p>
+
+<aside class="warning">
+There are 20 favorites by page
+</aside>
 <h2 id='retrieve-all-your-private-favorites'>Retrieve all your private favorites</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
   </span><span class="s2">"favorites"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1754,9 +1762,13 @@ Each of the requests require a token.
   </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint get all your private favorites.</p>
+<p>This endpoint get all your private favorites by page.</p>
 <h3 id='http-request-26'>HTTP REQUEST</h3>
-<p><code>GET /v1/favorites/me/private</code></p>
+<p><code>GET /v1/favorites/me/private/:page</code></p>
+
+<aside class="warning">
+There are 20 favorites by page
+</aside>
 <h1 id='profile'>Profile</h1>
 <p>All endpoints for profiles.</p>
 
