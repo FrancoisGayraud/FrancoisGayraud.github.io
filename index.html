@@ -304,6 +304,12 @@
                   <li>
                     <a href="#update-a-book" class="toc-h2 toc-link" data-title="update-a-book">Update a book</a>
                   </li>
+                  <li>
+                    <a href="#retrieve-pending-books" class="toc-h2 toc-link" data-title="retrieve-pending-books">Retrieve pending books</a>
+                  </li>
+                  <li>
+                    <a href="#accept-a-book-that-is-pending" class="toc-h2 toc-link" data-title="accept-a-book-that-is-pending">Accept a book that is pending</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -1695,6 +1701,100 @@ There are 20 books by page
 <td>The new URL of the cover image (optional)</td>
 </tr>
 </tbody></table>
+<h2 id='retrieve-pending-books'>Retrieve pending books</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"books"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Présentation d'Altran"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Biographie et Autobiographie"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">119</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"53473bb0eb3e32926bdf77eec7696fb9.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pdf_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"53473bb0eb3e32926bdf77eec7696fb9.pdf"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Voici la présentation de la société Altran"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pub_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"p"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-06-03T20:34:10.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"count_fav"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"accepted"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"grade"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vaxela"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fire And Blood"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Heroic Fantasy"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f506459317d30b35c94dcf6826621b9e.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pdf_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f506459317d30b35c94dcf6826621b9e.pdf"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aventures dans l'univers de Game of Thrones"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pub_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"p"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-04T13:52:49.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"count_fav"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"accepted"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"grade"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DidierFR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Didier"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tointoin"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FeedTest"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Carnet de Voyages"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">121</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d885347ba67c30587d42b4fd30dd52fe.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pdf_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d885347ba67c30587d42b4fd30dd52fe.pdf"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"adad"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pub_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"p"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-04T14:26:19.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"count_fav"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"accepted"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"grade"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ShepardFR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rémi"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cichy"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Books retrieved successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all pending books.</p>
+<h3 id='http-request-21'>HTTP REQUEST</h3>
+<p><code>GET /v1/books/pending</code></p>
+<h2 id='accept-a-book-that-is-pending'>Accept a book that is pending</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+   </span><span class="s2">"book"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FeedTest"</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Carnet de Voyages"</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">121</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d885347ba67c30587d42b4fd30dd52fe.jpg"</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"pdf_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d885347ba67c30587d42b4fd30dd52fe.pdf"</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"adad"</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"pub_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"p"</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-04T14:26:19.000Z"</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"count_fav"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"accepted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"grade"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+   </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Book accepted successfully."</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint accepts a book that is pending.</p>
+<h3 id='http-request-22'>HTTP REQUEST</h3>
+<p><code>POST /v1/books/accept/:id</code></p>
 <h1 id='favorites'>Favorites</h1>
 <p>All endpoints for favorites</p>
 
@@ -1736,7 +1836,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all favorites of the user. Token is required in the header of the request.</p>
-<h3 id='http-request-21'>HTTP REQUEST</h3>
+<h3 id='http-request-23'>HTTP REQUEST</h3>
 <p><code>GET /v1/favorites/me/all</code></p>
 <h2 id='retrieve-your-favorites-by-page'>Retrieve your favorites by page</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -1775,7 +1875,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all favorites of the user, by page. Token is required in the header of the request.</p>
-<h3 id='http-request-22'>HTTP REQUEST</h3>
+<h3 id='http-request-24'>HTTP REQUEST</h3>
 <p><code>GET /v1/favorites/me/all/:page</code></p>
 
 <aside class="warning">
@@ -1796,7 +1896,7 @@ There are 20 favorites by page
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint adds the book with the id in the URL to favorite.</p>
-<h3 id='http-request-23'>HTTP Request</h3>
+<h3 id='http-request-25'>HTTP Request</h3>
 <p><code>POST /v1/favorites/:idOfBook</code></p>
 <h2 id='delete-a-favorite'>Delete a favorite</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -1805,7 +1905,7 @@ There are 20 favorites by page
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint delete a book from favorites for the user, with the id specified at the end of the url.</p>
-<h3 id='http-request-24'>HTTP Request</h3>
+<h3 id='http-request-26'>HTTP Request</h3>
 <p><code>DELETE /v1/favorites/:idOfBook</code></p>
 <h2 id='get-a-favorite-by-its-id'>Get a favorite by its id</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -1840,7 +1940,7 @@ There are 20 favorites by page
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint get a favorite by its id.</p>
-<h3 id='http-request-25'>HTTP REQUEST</h3>
+<h3 id='http-request-27'>HTTP REQUEST</h3>
 <p><code>GET /v1/favorites/:idOfFavorite</code></p>
 <h2 id='patch-a-favorite-change-it-to-private-public'>Patch a favorite (change it to private/public)</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -1857,7 +1957,7 @@ There are 20 favorites by page
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint patch a favorite.</p>
-<h3 id='http-request-26'>HTTP REQUEST</h3>
+<h3 id='http-request-28'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/favorites/:idOfFavorite</code></p>
 <h3 id='body-parameters-9'>BODY PARAMETERS</h3>
 <table><thead>
@@ -1908,7 +2008,7 @@ There are 20 favorites by page
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint get all your public favorites.</p>
-<h3 id='http-request-27'>HTTP REQUEST</h3>
+<h3 id='http-request-29'>HTTP REQUEST</h3>
 <p><code>GET /v1/favorites/me/public/:page</code></p>
 
 <aside class="warning">
@@ -1951,7 +2051,7 @@ There are 20 favorites by page
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint get all your private favorites by page.</p>
-<h3 id='http-request-28'>HTTP REQUEST</h3>
+<h3 id='http-request-30'>HTTP REQUEST</h3>
 <p><code>GET /v1/favorites/me/private/:page</code></p>
 <h2 id='retrieve-a-favorite-with-an-id-of-a-book'>Retrieve a favorite with an id of a book</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -1986,7 +2086,7 @@ There are 20 favorites by page
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint get the favorite with the id of the book specified in the URL.</p>
-<h3 id='http-request-29'>HTTP REQUEST</h3>
+<h3 id='http-request-31'>HTTP REQUEST</h3>
 <p><code>GET /v1/favorites/books/:idOfBook</code></p>
 <h1 id='profile'>Profile</h1>
 <p>All endpoints for profiles.</p>
@@ -2024,7 +2124,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns information of the user profile. </p>
-<h3 id='http-request-30'>HTTP REQUEST</h3>
+<h3 id='http-request-32'>HTTP REQUEST</h3>
 <p><code>GET /v1/profile/me</code></p>
 <h2 id='update-profile-information'>Update profile information</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2055,7 +2155,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint updates informations of the user profile. </p>
-<h3 id='http-request-31'>HTTP REQUEST</h3>
+<h3 id='http-request-33'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/profile/me</code></p>
 <h3 id='body-parameters-10'>BODY PARAMETERS</h3>
 <table><thead>
@@ -2118,7 +2218,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint updates the password of the user.</p>
-<h3 id='http-request-32'>HTTP REQUEST</h3>
+<h3 id='http-request-34'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/profile/password</code></p>
 <h3 id='body-parameters-11'>BODY PARAMETERS</h3>
 <table><thead>
@@ -2165,7 +2265,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint updates the superuser status of the user by changing the variable &quot;is_superuser&quot;.</p>
-<h3 id='http-request-33'>HTTP REQUEST</h3>
+<h3 id='http-request-35'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/profile/superuser</code></p>
 <h3 id='body-parameters-12'>BODY PARAMETERS</h3>
 <table><thead>
@@ -2208,7 +2308,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint changes the variable &quot;is_active&quot; of the user.</p>
-<h3 id='http-request-34'>HTTP REQUEST</h3>
+<h3 id='http-request-36'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/profile/active</code></p>
 <h3 id='body-parameters-13'>BODY PARAMETERS</h3>
 <table><thead>
@@ -2249,7 +2349,7 @@ Each of the requests require a token.
 <aside class="notice">
 This endpoint create a new token, that it returns on the JSON data.
 </aside>
-<h3 id='http-request-35'>HTTP REQUEST</h3>
+<h3 id='http-request-37'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/profile/email</code></p>
 <h3 id='body-parameters-14'>BODY PARAMETERS</h3>
 <table><thead>
@@ -2292,7 +2392,7 @@ This endpoint create a new token, that it returns on the JSON data.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint changes the variable &quot;is_staff&quot; of the user.</p>
-<h3 id='http-request-36'>HTTP REQUEST</h3>
+<h3 id='http-request-38'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/profile/staff</code></p>
 <h3 id='body-parameters-15'>BODY PARAMETERS</h3>
 <table><thead>
@@ -2358,7 +2458,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all comments for a book, the id of the book must be specified at the end of the URL. Token is required in the header of the request.</p>
-<h3 id='http-request-37'>HTTP REQUEST</h3>
+<h3 id='http-request-39'>HTTP REQUEST</h3>
 <p><code>GET /v1/comments/books/:idOfBook/:page</code></p>
 <h2 id='retrieve-all-comments-of-a-user'>Retrieve all comments of a user</h2>
 <blockquote>
@@ -2387,7 +2487,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all comments of a user.</p>
-<h3 id='http-request-38'>HTTP REQUEST</h3>
+<h3 id='http-request-40'>HTTP REQUEST</h3>
 <p><code>GET /v1/comments/me</code></p>
 <h2 id='post-a-comment-on-a-book'>Post a comment on a book</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2403,7 +2503,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint posts a new comment for a book. </p>
-<h3 id='http-request-39'>HTTP REQUEST</h3>
+<h3 id='http-request-41'>HTTP REQUEST</h3>
 <p><code>POST /v1/comments/</code></p>
 <h4 id='body-parameters-16'>BODY PARAMETERS</h4>
 <table><thead>
@@ -2439,7 +2539,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint gets a comment by its id.</p>
-<h3 id='http-request-40'>HTTP REQUEST</h3>
+<h3 id='http-request-42'>HTTP REQUEST</h3>
 <p><code>GET /v1/comments/:idOfComment</code></p>
 <h2 id='delete-a-comment'>Delete a comment</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2448,7 +2548,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint deletes the comment with the id specified at the end of the url.</p>
-<h3 id='http-request-41'>HTTP Request</h3>
+<h3 id='http-request-43'>HTTP Request</h3>
 <p><code>DELETE /v1/comments/:idOfComment</code></p>
 <h2 id='delete-all-comments-for-a-book'>Delete all comments for a book</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2457,7 +2557,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint deletes all comments for the book with the id specified at the end of the url.</p>
-<h3 id='http-request-42'>HTTP Request</h3>
+<h3 id='http-request-44'>HTTP Request</h3>
 <p><code>DELETE /v1/comments/books/:idOfBook</code></p>
 <h2 id='update-a-comment'>Update a comment</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2466,7 +2566,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint updates the comment with the id specified at the end of the url.</p>
-<h3 id='http-request-43'>HTTP Request</h3>
+<h3 id='http-request-45'>HTTP Request</h3>
 <p><code>PATCH /v1/comments/:idOfComment</code></p>
 <h3 id='body-parameters-17'>BODY PARAMETERS</h3>
 <table><thead>
@@ -2500,7 +2600,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint posts a new message.</p>
-<h3 id='http-request-44'>HTTP REQUEST</h3>
+<h3 id='http-request-46'>HTTP REQUEST</h3>
 <p><code>POST /v1/messages/</code></p>
 <h3 id='body-parameters-18'>BODY PARAMETERS</h3>
 <table><thead>
@@ -2608,7 +2708,7 @@ Only ONE parameter is required to identify the receiver (EMAIL, USERNAME OR ID).
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint gets all the messages that you received.</p>
-<h3 id='http-request-45'>HTTP REQUEST</h3>
+<h3 id='http-request-47'>HTTP REQUEST</h3>
 <p><code>GET /v1/messages</code></p>
 <h2 id='get-all-users-that-you-have-a-conversation-with-by-page'>Get all users that you have a conversation with by page</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2673,7 +2773,7 @@ Only ONE parameter is required to identify the receiver (EMAIL, USERNAME OR ID).
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint gets all the users that you have an open conversation with, and the last message sent in each conversations. The search is by page</p>
-<h3 id='http-request-46'>HTTP REQUEST</h3>
+<h3 id='http-request-48'>HTTP REQUEST</h3>
 <p><code>GET /v1/messages/conversations/:page</code></p>
 
 <aside class="warning">
@@ -2851,7 +2951,7 @@ There are 10 conversations per page
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint gets all the the messages from the conversation with the user specified in the URL, by page.</p>
-<h3 id='http-request-47'>HTTP REQUEST</h3>
+<h3 id='http-request-49'>HTTP REQUEST</h3>
 <p><code>GET /v1/messages/conversations/:id/:page</code></p>
 
 <aside class="notice">
@@ -2872,7 +2972,7 @@ There are 10 messages per page
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint deletes all messages from the conversation with the user specified in the URL.</p>
-<h3 id='http-request-48'>HTTP REQUEST</h3>
+<h3 id='http-request-50'>HTTP REQUEST</h3>
 <p><code>DELETE /v1/messages/conversations/:id</code></p>
 <h2 id='remove-a-message'>Remove a message</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -2881,7 +2981,7 @@ There are 10 messages per page
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint deletes the message with the id specified in the URL.</p>
-<h3 id='http-request-49'>HTTP REQUEST</h3>
+<h3 id='http-request-51'>HTTP REQUEST</h3>
 <p><code>DELETE /v1/messages/:id</code></p>
 <h1 id='reviewers'>Reviewers</h1>
 <p>All endpoints for managing the Reviewers. The Reviewers table in the database makes the association between a reviewer and an author. It contains 3 columns : reviewer_id, author_id and created_at.</p>
@@ -2986,7 +3086,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all reviewers teams.</p>
-<h3 id='http-request-50'>HTTP REQUEST</h3>
+<h3 id='http-request-52'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviewers/teams</code></p>
 
 <aside class="notice">
@@ -3072,7 +3172,7 @@ status : 0 = not in the team yet | 1 = the request is pending | 2 = you are alre
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all your reviewers teams.</p>
-<h3 id='http-request-51'>HTTP REQUEST</h3>
+<h3 id='http-request-53'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviewers/teams/me</code></p>
 <h2 id='add-a-reviewer-to-your-team'>Add a reviewer to your team</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3091,7 +3191,7 @@ status : 0 = not in the team yet | 1 = the request is pending | 2 = you are alre
 <aside class="warning">
 Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
 </aside>
-<h3 id='http-request-52'>HTTP REQUEST</h3>
+<h3 id='http-request-54'>HTTP REQUEST</h3>
 <p><code>POST /v1/reviewers</code></p>
 <h3 id='body-parameters-19'>BODY PARAMETERS</h3>
 <table><thead>
@@ -3158,7 +3258,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoints returns all your reviewers as an author.</p>
-<h3 id='http-request-53'>HTTP REQUEST</h3>
+<h3 id='http-request-55'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviewers/author</code></p>
 <h2 id='get-all-the-authors-that-you-are-a-reviewer-of'>Get all the authors that you are a reviewer of</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3205,7 +3305,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the authors that you are a reviewer of.</p>
-<h3 id='http-request-54'>HTTP REQUEST</h3>
+<h3 id='http-request-56'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviewers/reviewing</code></p>
 <h2 id='create-a-request-to-become-a-reviewer'>Create a request to become a reviewer</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3219,7 +3319,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint creates a request to become a reviewer of an author.</p>
-<h3 id='http-request-55'>HTTP REQUEST</h3>
+<h3 id='http-request-57'>HTTP REQUEST</h3>
 <p><code>POST /v1/reviewers/request</code></p>
 <h3 id='body-parameter'>BODY PARAMETER</h3>
 <table><thead>
@@ -3267,7 +3367,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the pending requests to become one of your reviewer.</p>
-<h3 id='http-request-56'>HTTP REQUEST</h3>
+<h3 id='http-request-58'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviewers/request/me</code></p>
 <h2 id='delete-a-reviewer'>Delete a reviewer</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3276,7 +3376,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a reviewer.</p>
-<h3 id='http-request-57'>HTTP REQUEST</h3>
+<h3 id='http-request-59'>HTTP REQUEST</h3>
 <p><code>DELETE /v1/reviewers/:id</code></p>
 <h2 id='delete-a-reviewer-request'>Delete a reviewer request</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3285,7 +3385,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a reviewer request. The author id is mandatory in the url.</p>
-<h3 id='http-request-58'>HTTP REQUEST</h3>
+<h3 id='http-request-60'>HTTP REQUEST</h3>
 <p><code>DELETE /v1/reviewers/request/:authorid</code></p>
 <h1 id='reviews'>Reviews</h1>
 <p>All endpoints for the reviews.</p>
@@ -3307,7 +3407,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint create a review request for the book that has the id specified in the URL.</p>
-<h3 id='http-request-59'>HTTP REQUEST</h3>
+<h3 id='http-request-61'>HTTP REQUEST</h3>
 <p><code>POST /v1/reviews/request/:idOfBook</code></p>
 <h3 id='body-parameters-20'>BODY PARAMETERS</h3>
 <table><thead>
@@ -3362,7 +3462,7 @@ The date format is MM/DD/YYYY
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the requests that you created.</p>
-<h3 id='http-request-60'>HTTP REQUEST</h3>
+<h3 id='http-request-62'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/author/request</code></p>
 <h2 id='get-all-the-pending-requests-as-a-reviewer'>Get all the pending requests as a reviewer</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3445,7 +3545,7 @@ The date format is MM/DD/YYYY
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the requests for reviews you can make.</p>
-<h3 id='http-request-61'>HTTP REQUEST</h3>
+<h3 id='http-request-63'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/reviewer/request</code></p>
 <h2 id='post-a-review-as-a-reviewer'>Post a review as a reviewer</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3463,7 +3563,7 @@ The date format is MM/DD/YYYY
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint posts a review for the request with the id specified in the URL.</p>
-<h3 id='http-request-62'>HTTP REQUEST</h3>
+<h3 id='http-request-64'>HTTP REQUEST</h3>
 <p><code>POST /v1/reviews/:idOfRequestReview</code></p>
 <h3 id='body-parameters-21'>BODY PARAMETERS</h3>
 <table><thead>
@@ -3676,7 +3776,7 @@ Grade goes from 0 to 20
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the reviews, grouped by requests.</p>
-<h3 id='http-request-63'>HTTP REQUEST</h3>
+<h3 id='http-request-65'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/author</code></p>
 <h2 id='get-all-your-reviews-as-a-reviewer'>Get all your reviews as a reviewer</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3747,7 +3847,7 @@ Grade goes from 0 to 20
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the reviews, grouped by requests.</p>
-<h3 id='http-request-64'>HTTP REQUEST</h3>
+<h3 id='http-request-66'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/reviewer</code></p>
 <h2 id='get-all-id-of-books-that-have-been-reviewed'>Get all id of books that have been reviewed</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -3760,7 +3860,7 @@ Grade goes from 0 to 20
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all id of books that you have a review on.</p>
-<h3 id='http-request-65'>HTTP REQUEST</h3>
+<h3 id='http-request-67'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/books</code></p>
 <h2 id='get-all-reviews-for-a-book'>Get all reviews for a book</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3845,7 +3945,7 @@ Grade goes from 0 to 20
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all reviews for the book with the id specified in the URL.</p>
-<h3 id='http-request-66'>HTTP REQUEST</h3>
+<h3 id='http-request-68'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/books/:id</code></p>
 <h1 id='users'>Users</h1>
 <p>Endpoints relative to users.</p>
@@ -3904,7 +4004,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all users.</p>
-<h3 id='http-request-67'>HTTP REQUEST</h3>
+<h3 id='http-request-69'>HTTP REQUEST</h3>
 <p><code>GET /v1/users</code></p>
 <h2 id='get-all-authors'>Get all authors</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3927,7 +4027,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all authors.</p>
-<h3 id='http-request-68'>HTTP REQUEST</h3>
+<h3 id='http-request-70'>HTTP REQUEST</h3>
 <p><code>GET /v1/users/authors</code></p>
 <h2 id='get-a-user-by-its-id'>Get a user by its id</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3942,7 +4042,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns the user with the id specified in the URL.</p>
-<h3 id='http-request-69'>HTTP REQUEST</h3>
+<h3 id='http-request-71'>HTTP REQUEST</h3>
 <p><code>GET /v1/users/search/:idOfTheUser</code></p>
 <h2 id='delete-a-user-by-its-id'>Delete a user by its id</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -3951,7 +4051,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint deletes the user with the id specified in the URL. It also deletes his profile.</p>
-<h3 id='http-request-70'>HTTP REQUEST</h3>
+<h3 id='http-request-72'>HTTP REQUEST</h3>
 <p><code>DELETE /v1/users/:idOfTheUser</code></p>
 
 <aside class="warning">
@@ -3964,7 +4064,7 @@ You must be a staff member to use this endpoint (is_staff = 1).
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint patches the user with the id specified in the URL. It also deletes his profile.</p>
-<h3 id='http-request-71'>HTTP REQUEST</h3>
+<h3 id='http-request-73'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/users/:idOfTheUser</code></p>
 <h3 id='body-parameters-22'>BODY PARAMETERS</h3>
 <table><thead>
