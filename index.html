@@ -500,6 +500,20 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#web-sockets" class="toc-h1 toc-link" data-title="web-sockets">Web Sockets</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#initializing-socket-io" class="toc-h2 toc-link" data-title="initializing-socket-io">Initializing socket.io</a>
+                  </li>
+                  <li>
+                    <a href="#using-the-socket" class="toc-h2 toc-link" data-title="using-the-socket">Using the socket</a>
+                  </li>
+                  <li>
+                    <a href="#list-of-events" class="toc-h2 toc-link" data-title="list-of-events">List of events</a>
+                  </li>
+              </ul>
+          </li>
       </div>
         <ul class="toc-footer">
             <li><a href='#'>Made by Feedbook</a></li>
@@ -1427,7 +1441,7 @@ A page consists of 20 books.
 </span></code></pre>
 <p>This endpoint deletes the book with the id specified in the URL.</p>
 <h3 id='http-request-17'>HTTP REQUEST</h3>
-<p><code>DELETE /v1/books/:from/:to</code></p>
+<p><code>DELETE /v1/books/:id</code></p>
 <h2 id='get-all-books-between-a-time-range'>Get all books between a time range</h2>
 <blockquote>
 <p>Here we retrieve all books between <code>11/01/2018</code> and <code>12/03/2018</code></p>
@@ -4149,6 +4163,100 @@ You must be a staff member to use this endpoint (is_staff = 1).
 <aside class="warning">
 You must be a staff member to use this endpoint (is_staff = 1).
 </aside>
+<h1 id='web-sockets'>Web Sockets</h1>
+<p>Feedbook API uses socket.io (https://socket.io) to create web sockets. Those web sockets are used to send notification to user, for example when a new message was send.</p>
+
+<aside class="notice">
+The port for web sockets is 8080 on the server
+</aside>
+<h2 id='initializing-socket-io'>Initializing socket.io</h2>
+<p>You need to install socket.io. Then you have to create a socket in your app. This sockets takes the URL of the API as its first parameter, and an object with the mail of the connected user as the second. The mail allow the API to associate the sockets with the connected user.</p>
+
+<aside class="warning">
+The second paramter must be an object with a variable "query" which is a string with "mail=theMailOfTheUser@mail.com"
+</aside>
+<pre class="highlight javascript tab-javascript"><code> <span class="kd">var</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">(</span><span class="s1">'https://api-feedbook.herokuapp.com/'</span><span class="p">,</span> <span class="p">{</span> <span class="na">query</span><span class="p">:</span> <span class="s2">"mail=mailOfTheUser@mail.com"</span> <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>Here we initiate the socket</p>
+</blockquote>
+<h2 id='using-the-socket'>Using the socket</h2>
+<p>After you have initialize the socket, you can listen to events that the API can trigger. </p>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'nameOfTheEvent'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+   <span class="c1">// You can now access the data sent by th API</span>
+<span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>socket.on() allow you to listen to an event</p>
+</blockquote>
+<h2 id='list-of-events'>List of events</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'new book'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'new book'</span><span class="p">);</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+     <span class="c1">// You can now access the data sent by th API</span>
+ <span class="p">});</span>
+
+ <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'new comment on your book'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'new comment'</span><span class="p">);</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+     <span class="c1">// You can now access the data sent by th API</span>
+ <span class="p">});</span>
+
+ <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'new message'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'new message'</span><span class="p">);</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+     <span class="c1">// You can now access the data sent by th API</span>
+ <span class="p">});</span>
+
+ <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'added to a reviewer team'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'added to a team'</span><span class="p">);</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+     <span class="c1">// You can now access the data sent by th API</span>
+ <span class="p">});</span>
+
+ <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'new reviewer request'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'added to a team'</span><span class="p">);</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+     <span class="c1">// You can now access the data sent by th API</span>
+ <span class="p">});</span>
+</code></pre>
+<p>This is the list of events that are currently available with the Feedbook API. When an event is triggered the API send an object with various variable.</p>
+
+<table><thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>&#39;new book&#39;</td>
+<td>Triggers when a new book is published. It triggers for all connected users</td>
+<td><strong>title</strong> : title of the book <br/> <strong>id</strong> : id of the book <br/> <strong>image</strong> : URL of the cover of the book</td>
+</tr>
+<tr>
+<td>&#39;new comment on your book&#39;</td>
+<td>Triggers when a comment is published on one of your book</td>
+<td><strong>title</strong> : title of the book <br/> <strong>book_id</strong> : id of the book <br/> <strong>image</strong> : URL of the cover of the book <br/> <strong>user_id</strong> : id of the user that create the comment <br/> <strong>created_at</strong> : date of publication</td>
+</tr>
+<tr>
+<td>&#39;new message&#39;</td>
+<td>Triggers when you receive a new message</td>
+<td><strong>content</strong> : content of the message <br/> <strong>sender_id</strong> : id of the sender <br/> <strong>sent_at</strong> : date when the message was send</td>
+</tr>
+<tr>
+<td>&#39;new reviewer request&#39;</td>
+<td>Triggers when a user asks you to be part of his reviewer team</td>
+<td><strong>user</strong> : username of the user that send the request <br/> <strong>created_at</strong> : date when the request was send</td>
+</tr>
+<tr>
+<td>&#39;added to a reviewer team&#39;</td>
+<td>Triggers when you have been accepted to a reviewer team</td>
+<td><strong>author</strong> : username of the author that accepted you in his team <br/> <strong>created_at</strong> : date when the request is accepted by the author</td>
+</tr>
+</tbody></table>
+
+<p></script></p>
 
       </div>
       <div class="dark-box">
