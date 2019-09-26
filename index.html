@@ -447,7 +447,10 @@
                     <a href="#delete-a-reviewer" class="toc-h2 toc-link" data-title="delete-a-reviewer">Delete a reviewer</a>
                   </li>
                   <li>
-                    <a href="#delete-a-reviewer-request" class="toc-h2 toc-link" data-title="delete-a-reviewer-request">Delete a reviewer request</a>
+                    <a href="#delete-a-reviewer-request-as-an-author" class="toc-h2 toc-link" data-title="delete-a-reviewer-request-as-an-author">Delete a reviewer request as an author</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-reviewer-request-as-a-reader" class="toc-h2 toc-link" data-title="delete-a-reviewer-request-as-a-reader">Delete a reviewer request as a reader</a>
                   </li>
               </ul>
           </li>
@@ -638,8 +641,6 @@ Login returns the token that is required for most of the other endpoints.
     </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-01T21:02:47.034Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"basic_user_pic.jpg"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2qL9d4hY4qaggb9h"</span><span class="w">
   </span><span class="p">},</span><span class="w">
@@ -777,8 +778,6 @@ Verify token obviously needs a token in its header
     </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lel@test.apiSTPMARCHE"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-08T01:07:46.000Z"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-03T21:37:10.000Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testE"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qsdfjkl"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$2b$10$xH2gVJZH.OfhWWsSLfzKv.PU2lwfPYP4d1WbdwtBixKFbebkSIA96"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -1464,8 +1463,7 @@ A page consists of 20 books.
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -1483,8 +1481,7 @@ A page consists of 20 books.
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -1502,8 +1499,7 @@ A page consists of 20 books.
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -1521,8 +1517,7 @@ A page consists of 20 books.
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
@@ -1561,8 +1556,7 @@ The date format is MM/DD/YYYY
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -1580,8 +1574,7 @@ The date format is MM/DD/YYYY
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -1599,8 +1592,7 @@ The date format is MM/DD/YYYY
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -1618,8 +1610,7 @@ The date format is MM/DD/YYYY
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
@@ -1734,8 +1725,7 @@ There are 20 books by page
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vaxela"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -1754,8 +1744,7 @@ There are 20 books by page
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DidierFR"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Didier"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tointoin"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -1774,8 +1763,7 @@ There are 20 books by page
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ShepardFR"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rémi"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cichy"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
@@ -1839,8 +1827,7 @@ Each of the requests require a token.
         </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+          </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -1876,8 +1863,7 @@ Each of the requests require a token.
         </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+          </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -1944,8 +1930,7 @@ There are 20 favorites by page
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
@@ -2009,8 +1994,7 @@ There are 20 favorites by page
         </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+          </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -2052,8 +2036,7 @@ There are 20 favorites by page
         </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+          </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -2092,8 +2075,8 @@ There are 20 favorites by page
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tomtom"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tom"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
+</span><span class="p">,</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
@@ -2183,12 +2166,8 @@ Each of the requests require a token.
 <td>User&#39;s username (optional).</td>
 </tr>
 <tr>
-<td>firstname</td>
-<td>User&#39;s firstname (optional).</td>
-</tr>
-<tr>
-<td>lastname</td>
-<td>User&#39;s lastname (optional).</td>
+<td>paypal</td>
+<td>donation link (optional).</td>
 </tr>
 <tr>
 <td>bio</td>
@@ -2209,8 +2188,7 @@ Each of the requests require a token.
     </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lucas@gmadil.comzqdeqdsfsfqsd"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-01T19:54:14.000Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testEIP"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$2b$10$G/1IsM17ABqOT11.2dRtiONqNEFT5Ise73bphUZezUyIwBIpK0diC"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -2256,8 +2234,7 @@ Each of the requests require a token.
     </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lucas@gmail.com"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-01T19:54:14.000Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testEIP"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$2b$10$G/1IsM17ABqOT11.2dRtiONqNEFT5Ise73bphUZezUyIwBI"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -2299,8 +2276,7 @@ Each of the requests require a token.
     </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lucas@gmail.com"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-01T19:54:14.000Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testEIP"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$2b$10$G/1IsM17ABqOT11.2dRtiONqNEFT5Ise73bphUZezUyIwBIpK0diC"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -2343,8 +2319,7 @@ Each of the requests require a token.
       </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lel@test.apiSTPMARCHE"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-07T17:47:34.000Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-03T21:37:10.000Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testE"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qsdfjkl"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$2b$10$n6ONjvOfTZ9btCgzYd6es.wn0fqnT05jnUjKuZEqtEhBWZC1KEZa2"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -2383,8 +2358,7 @@ This endpoint create a new token, that it returns on the JSON data.
     </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lucas@gmail.com"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-01T19:54:14.000Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testEIP"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$2b$10$G/1IsM17ABqOT11.2dRtiONqNEFT5Ise73bphUZezUyIwBIpK0diC"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -2444,8 +2418,7 @@ Each of the requests require a token.
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fgayraud3008@gmail.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-11T01:08:18.000Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-26T01:43:50.000Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -2660,8 +2633,7 @@ Only ONE parameter is required to identify the receiver (EMAIL, USERNAME OR ID).
       </span><span class="s2">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sujet du message"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"receiver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -2673,8 +2645,7 @@ Only ONE parameter is required to identify the receiver (EMAIL, USERNAME OR ID).
       </span><span class="s2">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sujet du message"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"receiver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -2686,8 +2657,7 @@ Only ONE parameter is required to identify the receiver (EMAIL, USERNAME OR ID).
       </span><span class="s2">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sujet du message"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"receiver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -2699,8 +2669,7 @@ Only ONE parameter is required to identify the receiver (EMAIL, USERNAME OR ID).
       </span><span class="s2">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sujet du message"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"receiver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -2712,8 +2681,7 @@ Only ONE parameter is required to identify the receiver (EMAIL, USERNAME OR ID).
       </span><span class="s2">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sujet du message"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"receiver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
@@ -2806,13 +2774,11 @@ There are 10 conversations per page
       </span><span class="s2">"sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-09T16:14:41.000Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"receiver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AP"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"II"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -2824,13 +2790,11 @@ There are 10 conversations per page
       </span><span class="s2">"sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-09T16:14:41.000Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"receiver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AP"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"II"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -2842,13 +2806,11 @@ There are 10 conversations per page
       </span><span class="s2">"sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-09T16:14:40.000Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"receiver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AP"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"II"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -2860,13 +2822,11 @@ There are 10 conversations per page
       </span><span class="s2">"sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-09T16:14:40.000Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"receiver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AP"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"II"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -2878,13 +2838,11 @@ There are 10 conversations per page
       </span><span class="s2">"sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-09T16:14:39.000Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"receiver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AP"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"II"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -2896,13 +2854,11 @@ There are 10 conversations per page
       </span><span class="s2">"sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-09T16:14:39.000Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"receiver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AP"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"II"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -2914,13 +2870,11 @@ There are 10 conversations per page
       </span><span class="s2">"sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-09T16:14:38.000Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"receiver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AP"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"II"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -2932,13 +2886,11 @@ There are 10 conversations per page
       </span><span class="s2">"sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-09T15:48:24.000Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"receiver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AP"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"II"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -2950,13 +2902,11 @@ There are 10 conversations per page
       </span><span class="s2">"sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-09T15:47:43.000Z"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"receiver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"sender"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AP"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"II"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
@@ -3013,8 +2963,7 @@ Each of the requests require a token.
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeagueOfLegend"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="s2">"my_reviewer_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -3026,8 +2975,7 @@ Each of the requests require a token.
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dza"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nemeor"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nemeor"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="s2">"my_reviewer_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -3039,8 +2987,7 @@ Each of the requests require a token.
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
       </span><span class="s2">"my_reviewer_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
@@ -3050,8 +2997,7 @@ Each of the requests require a token.
           </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fgayraud3008@gmail.com"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-12T23:45:49.000Z"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-26T01:43:50.000Z"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -3062,8 +3008,7 @@ Each of the requests require a token.
           </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lucas.vaxelaire@epitech.eu"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-12T23:57:47.000Z"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18T00:04:26.000Z"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
@@ -3074,8 +3019,7 @@ Each of the requests require a token.
           </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nemeor@nemeor.fr"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-12T21:29:04.000Z"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18T11:29:34.000Z"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nemeor"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nemeor"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
@@ -3089,8 +3033,7 @@ Each of the requests require a token.
       </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tomtom"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tom"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"my_reviewer_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -3118,8 +3061,7 @@ status : 0 = not in the team yet | 1 = the request is pending | 2 = you are alre
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fgayraud3008@gmail.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-10T18:35:33.000Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-26T01:43:50.000Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -3131,8 +3073,7 @@ status : 0 = not in the team yet | 1 = the request is pending | 2 = you are alre
           </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vaxelaire.lucas@gmail.com"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-20T11:38:24.000Z"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-20T11:38:16.000Z"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Antoinette"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jean"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
@@ -3143,8 +3084,7 @@ status : 0 = not in the team yet | 1 = the request is pending | 2 = you are alre
           </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fgayraud3008@gmail.com"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-10T18:35:33.000Z"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-26T01:43:50.000Z"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -3160,8 +3100,7 @@ status : 0 = not in the team yet | 1 = the request is pending | 2 = you are alre
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lucas.vaxelaire@epitech.eu"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-10T14:18:26.000Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18T00:04:26.000Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lucas"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vax"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
@@ -3173,8 +3112,7 @@ status : 0 = not in the team yet | 1 = the request is pending | 2 = you are alre
           </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fgayraud3008@gmail.com"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-10T18:35:33.000Z"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-26T01:43:50.000Z"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
           </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -3242,8 +3180,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fgayraud3008@gmail.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-04T23:12:45.000Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-26T01:43:50.000Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"François"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gayraud"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -3260,8 +3197,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vaxelaire.lucas@gmail.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-20T11:38:24.000Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-20T11:38:16.000Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Antoine"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jean"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
@@ -3289,8 +3225,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fgayraud3008@gmail.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-04T23:12:45.000Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-26T01:43:50.000Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -3307,8 +3242,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lucas.vaxelaire@epitech.eu"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-05T12:37:04.000Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18T00:04:26.000Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thomas"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pizd"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_staff"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_superuser"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
@@ -3359,8 +3293,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
       </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
@@ -3372,8 +3305,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
       </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ReviewerTest"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ReviewerMan"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HommeReviewer"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -3392,7 +3324,7 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
 <p>This endpoint deletes a reviewer.</p>
 <h3 id='http-request-59'>HTTP REQUEST</h3>
 <p><code>DELETE /v1/reviewers/:id</code></p>
-<h2 id='delete-a-reviewer-request'>Delete a reviewer request</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+<h2 id='delete-a-reviewer-request-as-an-author'>Delete a reviewer request as an author</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
   </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reviewer request successfully deleted."</span><span class="p">,</span><span class="w">
   </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
@@ -3401,6 +3333,15 @@ Only ONE parameter is required to identify the reviewer (EMAIL, USERNAME OR ID).
 <p>This endpoint deletes a reviewer request. The author id is mandatory in the url.</p>
 <h3 id='http-request-60'>HTTP REQUEST</h3>
 <p><code>DELETE /v1/reviewers/request/:authorid</code></p>
+<h2 id='delete-a-reviewer-request-as-a-reader'>Delete a reviewer request as a reader</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reviewer request successfully deleted."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a reviewer request. The author id is mandatory in the url.</p>
+<h3 id='http-request-61'>HTTP REQUEST</h3>
+<p><code>DELETE /v1/reviewers/request/user/:user_id</code></p>
 <h1 id='reviews'>Reviews</h1>
 <p>All endpoints for the reviews.</p>
 
@@ -3421,7 +3362,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint create a review request for the book that has the id specified in the URL.</p>
-<h3 id='http-request-61'>HTTP REQUEST</h3>
+<h3 id='http-request-62'>HTTP REQUEST</h3>
 <p><code>POST /v1/reviews/request/:idOfBook</code></p>
 <h3 id='body-parameters-20'>BODY PARAMETERS</h3>
 <table><thead>
@@ -3476,7 +3417,7 @@ The date format is MM/DD/YYYY
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the requests that you created.</p>
-<h3 id='http-request-62'>HTTP REQUEST</h3>
+<h3 id='http-request-63'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/author/request</code></p>
 <h2 id='get-all-the-pending-requests-as-a-reviewer'>Get all the pending requests as a reviewer</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3559,7 +3500,7 @@ The date format is MM/DD/YYYY
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the requests for reviews you can make.</p>
-<h3 id='http-request-63'>HTTP REQUEST</h3>
+<h3 id='http-request-64'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/reviewer/request</code></p>
 <h2 id='post-a-review-as-a-reviewer'>Post a review as a reviewer</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3577,7 +3518,7 @@ The date format is MM/DD/YYYY
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint posts a review for the request with the id specified in the URL.</p>
-<h3 id='http-request-64'>HTTP REQUEST</h3>
+<h3 id='http-request-65'>HTTP REQUEST</h3>
 <p><code>POST /v1/reviews/:idOfRequestReview</code></p>
 <h3 id='body-parameters-21'>BODY PARAMETERS</h3>
 <table><thead>
@@ -3790,7 +3731,7 @@ Grade goes from 0 to 20
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the reviews, grouped by requests.</p>
-<h3 id='http-request-65'>HTTP REQUEST</h3>
+<h3 id='http-request-66'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/author</code></p>
 <h2 id='get-all-your-reviews-as-a-reviewer'>Get all your reviews as a reviewer</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3861,7 +3802,7 @@ Grade goes from 0 to 20
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all the reviews, grouped by requests.</p>
-<h3 id='http-request-66'>HTTP REQUEST</h3>
+<h3 id='http-request-67'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/reviewer</code></p>
 <h2 id='get-all-id-of-books-that-have-been-reviewed'>Get all id of books that have been reviewed</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -3874,7 +3815,7 @@ Grade goes from 0 to 20
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all id of books that you have a review on.</p>
-<h3 id='http-request-67'>HTTP REQUEST</h3>
+<h3 id='http-request-68'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/books</code></p>
 <h2 id='get-all-reviews-for-a-book'>Get all reviews for a book</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -3891,8 +3832,7 @@ Grade goes from 0 to 20
       </span><span class="s2">"book"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="s2">"reviewer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -3906,8 +3846,7 @@ Grade goes from 0 to 20
       </span><span class="s2">"book"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="s2">"reviewer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -3921,8 +3860,7 @@ Grade goes from 0 to 20
       </span><span class="s2">"book"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="s2">"reviewer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -3936,8 +3874,7 @@ Grade goes from 0 to 20
       </span><span class="s2">"book"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="s2">"reviewer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -3951,15 +3888,14 @@ Grade goes from 0 to 20
       </span><span class="s2">"book"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="s2">"reviewer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Francois"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monPrénom"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w">
+        </span><span class="s2">"paypal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal.link.me"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all reviews for the book with the id specified in the URL.</p>
-<h3 id='http-request-68'>HTTP REQUEST</h3>
+<h3 id='http-request-69'>HTTP REQUEST</h3>
 <p><code>GET /v1/reviews/books/:id</code></p>
 <h1 id='users'>Users</h1>
 <p>Endpoints relative to users.</p>
@@ -4039,7 +3975,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all users.</p>
-<h3 id='http-request-69'>HTTP REQUEST</h3>
+<h3 id='http-request-70'>HTTP REQUEST</h3>
 <p><code>GET /v1/users</code></p>
 <h2 id='get-all-authors'>Get all authors</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -4062,7 +3998,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns all authors.</p>
-<h3 id='http-request-70'>HTTP REQUEST</h3>
+<h3 id='http-request-71'>HTTP REQUEST</h3>
 <p><code>GET /v1/users/authors</code></p>
 <h2 id='get-a-user-by-its-id'>Get a user by its id</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
@@ -4083,7 +4019,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint returns the user with the id specified in the URL.</p>
-<h3 id='http-request-71'>HTTP REQUEST</h3>
+<h3 id='http-request-72'>HTTP REQUEST</h3>
 <p><code>GET /v1/users/search/:idOfTheUser</code></p>
 <h2 id='delete-a-user-by-its-id'>Delete a user by its id</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -4092,7 +4028,7 @@ Each of the requests require a token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint deletes the user with the id specified in the URL. It also deletes his profile.</p>
-<h3 id='http-request-72'>HTTP REQUEST</h3>
+<h3 id='http-request-73'>HTTP REQUEST</h3>
 <p><code>DELETE /v1/users/:idOfTheUser</code></p>
 
 <aside class="warning">
@@ -4105,7 +4041,7 @@ You must be a staff member to use this endpoint (is_staff = 1).
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint patches the user with the id specified in the URL. It also deletes his profile.</p>
-<h3 id='http-request-73'>HTTP REQUEST</h3>
+<h3 id='http-request-74'>HTTP REQUEST</h3>
 <p><code>PATCH /v1/users/:idOfTheUser</code></p>
 <h3 id='body-parameters-22'>BODY PARAMETERS</h3>
 <table><thead>
@@ -4127,12 +4063,8 @@ You must be a staff member to use this endpoint (is_staff = 1).
 <td>User&#39;s joining date</td>
 </tr>
 <tr>
-<td>first_name</td>
-<td>User&#39;s first name</td>
-</tr>
-<tr>
-<td>last_name</td>
-<td>User&#39;s last name</td>
+<td>paypal</td>
+<td>Paypal donation link</td>
 </tr>
 <tr>
 <td>is_superuser</td>
@@ -4170,10 +4102,14 @@ You must be a staff member to use this endpoint (is_staff = 1).
 The port for web sockets is 8080 on the server
 </aside>
 <h2 id='initializing-socket-io'>Initializing socket.io</h2>
-<p>You need to install socket.io. Then you have to create a socket in your app. This sockets takes the URL of the API as its first parameter, and an object with the mail of the connected user as the second. The mail allow the API to associate the sockets with the connected user.</p>
+<p>You need to install <strong>socket.io</strong>. </p>
+
+<p>Then you have to create a socket in your app. This socket takes the URL of the API as its first parameter, and an object with the mail of the connected user as the second. </p>
+
+<p>The mail allow the API to associate the socket with the connected user.</p>
 
 <aside class="warning">
-The second paramter must be an object with a variable "query" which is a string with "mail=theMailOfTheUser@mail.com"
+The second parameter must be an object with a variable "query" which is a string with "mail=theMailOfTheUser@mail.com"
 </aside>
 <pre class="highlight javascript tab-javascript"><code> <span class="kd">var</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">(</span><span class="s1">'https://api-feedbook.herokuapp.com/'</span><span class="p">,</span> <span class="p">{</span> <span class="na">query</span><span class="p">:</span> <span class="s2">"mail=mailOfTheUser@mail.com"</span> <span class="p">});</span>
 </code></pre>
